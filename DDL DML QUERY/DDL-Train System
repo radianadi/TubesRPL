@@ -1,0 +1,119 @@
+create table kota(
+id_kota char(3),
+nama_kota varchar(10),
+constraint pk_kota primary key(id_kota)
+);
+
+create table stasiun(
+id_stasiun char(5),
+nama_stasiun varchar(25),
+id_kota char(3),
+constraint pk_cabang primary key(id_stasiun),
+constraint fk_cabang foreign key(id_kota)references kota on delete cascade
+);
+
+
+create table jenis(           
+id_jenis char(3),
+nama_jenis varchar(10),
+constraint pk_jenis primary key(id_jenis)
+);
+
+
+create table rute(
+id_rute char(5),
+stasiun_1 varchar(25),
+stasiun_2 varchar(25),
+stasiun_3 varchar(25),
+constraint pk_rute primary key (id_rute)
+);
+
+create table kereta(
+id_kereta char(5),
+nama_kereta varchar2(25),
+jumlah_kursi number(3),
+jumlah_gerbong number(2),
+id_jenis char(3),
+harga number (6),
+id_rute char(5),
+constraint pk_kereta primary key(id_kereta),
+constraint fk_keretajenis foreign key(id_jenis) references jenis on delete cascade,
+constraint fk_keretarute foreign key(id_rute) references rute on delete cascade
+);
+
+create table keretastasiun(
+id_keretastasiun char(11),
+id_stasiun char(5),
+id_kereta char (5),
+constraint pk_keretastasiun primary key(id_keretastasiun),
+constraint fk_stakereta foreign key(id_stasiun)references stasiun on delete cascade,
+constraint fk_kerstasiun foreign key(id_kereta)references kereta on delete cascade 
+);
+
+create table jadwal(
+id_jadwal char(9),
+jam_datang char(5),
+jam_berangkat char(5),
+stasiun_tujuan varchar2(25),
+constraint pk_jadwal primary key(id_jadwal)
+); 
+
+CREATE TABLE penjadwalan(
+id_penjadwalan char(5),
+id_kereta char(5),
+id_jadwal char(9),
+CONSTRAINT fk_penjadwalan primary key(id_penjadwalan),
+CONSTRAINT fk_penjadwalankereta FOREIGN KEY(id_kereta) REFERENCES kereta,
+CONSTRAINT fk_penjadwalanjadwal FOREIGN KEY(id_jadwal) REFERENCES jadwal
+);
+
+create table petugas(
+id_petugas char(5),
+nama_petugas varchar2(30),
+umur number(2),
+jenis_kelamin varchar2(10),
+alamat varchar(40),
+constraint pk_petugas primary key (id_petugas)
+);
+
+create table penumpang(
+id_penumpang char(5),
+nama_penumpang varchar2(25),
+jenis_kelamin varchar2(10),
+umur number (2),
+alamat varchar2(40),
+constraint pk_penumpang primary key(id_penumpang)
+);
+
+create table tiket(
+id_tiket char(7),
+gerbong number(1),
+nokursi number(3),
+tgl_pemesanan date,
+id_penumpang char(5),
+id_jadwal char(9),
+id_petugas char(5),
+id_penjadwalan char(5),
+constraint pk_tiket primary key(id_tiket),
+constraint pk_tiketpenumpang foreign key(id_penumpang) references penumpang on delete cascade,
+constraint fk_tiketjadwal foreign key(id_jadwal) references jadwal on delete cascade,
+constraint fk_tiketpetugas foreign key(id_petugas) references petugas on delete cascade,
+constraint fk_tiketpenjadwalan foreign key(id_penjadwalan) references penjadwalan on delete cascade
+);
+
+alter session set nls_date_format='DD-MM-YYYY';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

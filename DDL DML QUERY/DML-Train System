@@ -1,0 +1,227 @@
+
+/*kota*/
+insert into kota values('BDG','BANDUNG');
+insert into kota values('JKT','JAKARTA');
+insert into kota values('SBY','SURABAYA');
+insert into kota values('SMR','SEMARANG');
+insert into kota values('YGY','YOGYAKARTA');
+
+
+/*jenis*/
+insert into jenis values('EKS','EKSEKUTIF');
+insert into jenis values('BIS','BISNIS');
+insert into jenis values('EKO','EKONOMI');
+insert into jenis values('EKA','EKONOMI AC');
+
+
+
+
+/*stasiun*/ 
+insert into stasiun values('BDG01','St.Cimahi','BDG');
+insert into stasiun values('BDG02','St.Padalarang','BDG');
+insert into stasiun values('JKT02','St.Pasarsenen','JKT');
+insert into stasiun values('SBY01','St.Surabaya gubeng','SBY');
+insert into stasiun values('JKT01','St.Gambir','JKT');
+insert into stasiun values('SMR01','St.Semarangtawang','SMR');
+insert into stasiun values('YGY01','St.Brambanan','YGY');
+insert into stasiun values('JKT03','St.Tanahabang','JKT');
+insert into stasiun values('BDG03','St.Gedebage','BDG');
+insert into stasiun values('SBY02','St.Pasar Turi','SBY');
+insert into stasiun values('SBY03','St.Wonokromo','SBY');
+
+
+/*rute*/
+insert into rute values('B-S-1','st.cimahi','st.pasarsenen','st.gubang');
+insert into rute values('B-M-1','St.Padalarang','St.Gambir','St.Surabaya gubeng');
+insert into rute values('J-Y-1','St.Pasarsenen','St.Gedebage','St.Brambanan');
+insert into rute values('S-Y-1','St.Surabaya gubeng','St.Gambir','St.Lempuyangan');
+insert into rute values('J-B-1','St.Gambir','St.Pasarsenen','St.Padalarang');
+insert into rute values('M-S-1','St.Semarangtawang','St.Semarangponcol','St.Pasarturi');
+insert into rute values('Y-M-1','St.Brambanan','St.Lempuyangan','St.Semarangponcol');
+insert into rute values('B-J-1','St.Gedebage','St.Padalarang','St.Gambir');
+insert into rute values('B-Y-1','St.Cimahi','St.Pasarsenen','St.Santolo');
+insert into rute values('J-S-1','St.Tanah Abang','St.Cimahi','St.Surabaya Gubeng');
+insert into rute values ('J-M-1','st.Pasarsenen','st.Gambir','st.Semarangtawang');
+insert into rute values ('S-B-1','st.Pasarturi','st.Gambir','st.Cimahi');
+insert into rute values ('S-J-1','st.wonokromo','st.pasarturi','st.gambir');
+
+/*kereta*/
+insert into kereta values('AGW01','ARGO WILIS 1',320,5,'EKA',160000,'B-S-1');
+insert into kereta values('HRN01','HARINA 1',300,5,'EKS',210000,'B-M-1');
+insert into kereta values('GJW01','GAJAH WONG 1',380,6,'EKS',180000,'J-Y-1');
+insert into kereta values('SCK01','SANCAKA  1',310,6,'BIS',150000,'S-Y-1');
+insert into kereta values('AGD01','ARGO GEDE 1',400,8,'EKO',40000,'J-B-1');
+insert into kereta values('RJW01','RAJAWALI 1',400,6,'EKS',150000,'M-S-1');
+insert into kereta values('SJU01','SENJA UTAMA 1',420,6,'BIS',120000,'Y-M-1');
+insert into kereta values('AGP01','ARGO PARAHYANGAN 1',425,6,'BIS',70000,'B-J-1');
+insert into kereta values('FJU01','FAJAR UTAMA 1',300,5,'EKS',200000,'B-Y-1');
+insert into kereta values('GBM01','GAYA BARU MALAM SELATAN 1',250,4,'EKS',175000,'J-S-1');
+insert into kereta values('MJP01','MAJAPAHIT 1',300,5,'BIS',120000,'J-M-1');
+insert into kereta values('MTS01','MUTIARA SELATAN 1',250,4,'EKS',150000,'S-B-1');
+insert into kereta values('AGB01','ARGOBROMO 1',300,5,'EKA',90000,'S-J-1');
+
+
+
+
+/*keretastasiun*/
+insert into keretastasiun values('BDG01-AGW01','BDG01','AGW01');
+insert into keretastasiun values('BDG02-HRN01','BDG02','HRN01');
+insert into keretastasiun values('JKT02-GJW01','JKT02','GJW01');
+insert into keretastasiun values('SBY01-SCK01','SBY01','SCK01');
+insert into keretastasiun values('JKT01-AGD01','JKT01','AGD01');
+insert into keretastasiun values('SMR01-RJW01','SMR01','RJW01');
+insert into keretastasiun values('YGY01-SJU01','YGY01','SJU01');
+insert into keretastasiun values('BDG03-AGP01','BDG03','AGP01');
+insert into keretastasiun values('BDG01-FJU01','BDG01','FJU01');
+insert into keretastasiun values('JKT03-GBM01','JKT03','GBM01');
+insert into keretastasiun values('JKT02-MJP01','JKT02','MJP01');
+insert into keretastasiun values('SBY02-MTS01','SBY02','MTS01');
+insert into keretastasiun values('SBY03-AGB01','SBY03','AGB01');
+
+
+
+/*jadwal*/
+insert into jadwal values('BDG-SBY-1','08.00','08.30','st.gubang');
+insert into jadwal values('BDG-SMR-1','08.00','08.30','St.Surabayagubeng');
+insert into jadwal values('JKT-YGY-1','09.00','09.30','St.Brambanan');
+insert into jadwal values('SBY-YGY-1','09.30','10.00','St.Lempuyangan');
+insert into jadwal values('JKT-BDG-1','08.00','08.30','St.Padalarang');
+insert into jadwal values('SMR-SBY-1','08.00','08.30','St.Pasarturi');
+insert into jadwal values('YGY-SMR-1','08.00','08.30','St.Semarangponcol');
+insert into jadwal values('BDG-JKT-1','08.00','08.30','St.Gambir');
+insert into jadwal values('BDG-YGY-1','08.15','08.30','St.Santolo');
+insert into jadwal values('JKT-SBY-1','08.00','08.30','St.Surabaya Gubeng');
+insert into jadwal values('JKT-SMR-1','08.00','08.30','St.Semarangtawang');
+insert into jadwal values('SBY-BDG-1','08.00','08.30','St.Cimahi');
+insert into jadwal values('SBY-JKT-1','08.00','08.30','St.Gambir');
+
+/*penjadwalan*/
+insert into penjadwalan values('11111','AGW01','BDG-SBY-1');
+insert into penjadwalan values('11421','HRN01','BDG-SMR-1');
+insert into penjadwalan values('23423','GJW01','JKT-YGY-1');
+insert into penjadwalan values('12452','SCK01','SBY-YGY-1');
+insert into penjadwalan values('12522','AGD01','JKT-BDG-1');
+insert into penjadwalan values('32122','RJW01','SMR-SBY-1');
+insert into penjadwalan values('12122','SJU01','YGY-SMR-1');
+insert into penjadwalan values('15222','AGP01','BDG-JKT-1');
+insert into penjadwalan values('11122','FJU01','BDG-YGY-1');
+insert into penjadwalan values('21322','GBM01','JKT-SBY-1');
+insert into penjadwalan values('90322','MJP01','JKT-SMR-1');
+insert into penjadwalan values('80322','MTS01','SBY-BDG-1');
+insert into penjadwalan values('87322','AGB01','SBY-JKT-1');
+
+
+
+
+/*petugas*/
+insert into petugas values('PT141','Ani Nurfitriani',25,'Laki-laki','Jl.Pegangsaan timur no 1 rt 09 rw 05');
+insert into petugas values('PT111','Andi Budiansyah',30,'Laki-laki','Jl.Supratman no 3 rt 04 rw 17');
+insert into petugas values('PT132','Budi Akbar',28,'Laki-laki','Jl.H Yasin no 22 rt 03 rw 17');
+insert into petugas values('PT431','Anto Nurzaman',30,'Laki-laki','Jl.Sindangsari no 6 rt 10 rw 15');
+insert into petugas values('PT131','Sandi Sulaiman',24,'Laki-laki','Jl.Sukajadi no 15 rt 17 rw 17');
+insert into petugas values('PT161','Zaki Indrawan',23,'Laki-laki','Jl.Sukahaji no 18 rt 14 rw 22');
+insert into petugas values('PT114','Dwi Cahyani',22,'Perempuan','Jl.Banda no 15 rt 01 rw 10');
+insert into petugas values('PT323','Ilham Nur Akbar',24,'Laki-laki','Jl.Sukajadi no 10 rt 13 rw 17');
+insert into petugas values('PT461','Indrawansyah',23,'Laki-laki','Jl.Sukahaji no 8 rt 03 rw 22');
+insert into petugas values('PT231','Dwi Nuraini',22,'Perempuan','Jl.Banda no 15 rt 3 rw 10');
+insert into petugas values('PT031','Nuraini',22,'Perempuan','Jl.Banda no 16 rt 3 rw 10');
+
+/*penumpang*/
+insert into penumpang values('SA132','Hendi Abdul Aziz','Laki-Laki','18','Jl Cibiru Hilir no 5 RT 06 R2 14');
+insert into penumpang values('CD122','Jati Nur Akbar','Laki-Laki','18','Jl Cibiru Weran no 4 RT 06 R2 14');
+insert into penumpang values('RE112','Dimas Fauzi','Laki-Laki','18','Jl Cileunyi Kulon no 3 RT 06 R2 14');
+insert into penumpang values('AS132','Dicky Pratama','Laki-Laki','18','Jl Cilegon no 8 RT 06 R2 14');
+insert into penumpang values('RT132','Tama Rahadiansyah','Laki-Laki','18','Jl Pasar Senen no 7 RT 06 R2 14');
+insert into penumpang values('CE112','Dwi Nurjanah','Perempuan','19','Jl Sukahaji no 117 RT 06 RW 14');
+insert into penumpang values('SE132','Dita Amalia','Perempuan','29','Jl Cinunuk no 19 RT 16 RW 04');
+insert into penumpang values('RE152','Amalia Sukmana','Perempuan','22','Jl Pegangsaan no 49 RT 16 RW 04');
+insert into penumpang values('CE172','Nur Rizkiani','Perempuan','20','Jl Imam Bonjol no 39 RT 16 RW 04');
+insert into penumpang values('CR142','Cahyani fitria','Perempuan','19','Jl Tegalega no 112 RT 16 RW 04');
+insert into penumpang values('SA032','Budi Nurzaman','Laki-Laki','18','Jl Cibiru Hilir no 4 RT 06 R2 14');
+insert into penumpang values('ZA232','Andi Firmansyah','Laki-Laki','20','Jl Cijera no 6 RT 06 R2 14');
+insert into penumpang values('BA332','Akip Sujana','Laki-Laki','28','Jl Cibiru Hilir no 7 RT 06 R2 14');
+insert into penumpang values('SA432','Fauzan Suhardi','Laki-Laki','28','Jl Cibiru Hilir no 8 RT 06 R2 14');
+insert into penumpang values('SA532','Firza Nur Lukman','Laki-Laki','17','Jl Cijera no 9 RT 06 R2 14');
+insert into penumpang values('SA632','Dimas Nur Alamsyah','Laki-Laki','28','Jl Cibiru Hilir no 10 RT 06 R2 14');
+insert into penumpang values('SA732','Yanto Abdul Aziz ','Laki-Laki','38','Jl Cibiru Hilir no 11 RT 06 R2 14');
+insert into penumpang values('SA832','Hendi Hilamsyah','Laki-Laki','15','Jl Cijera no 12 RT 06 R2 14');
+insert into penumpang values('SA932','Syahrul Supono','Laki-Laki','19','Jl Cijera no 13 RT 06 R2 14');
+insert into penumpang values('XA132','Akip Irwanto','Laki-Laki','20','Jl Cibiru Hilir no 14 RT 06 R2 14');
+insert into penumpang values('SA142','Irwan nur Akip','Laki-Laki','17','Jl Cinunuk Hilir no 15 RT 06 R2 14');
+insert into penumpang values('SA152','Uje bandi','Laki-Laki','19','Jl Cibiru Hilir no 16 RT 06 R2 14');
+insert into penumpang values('SA162','Yadi Aep','Laki-Laki','20','Jl Cinunuk Hilir no 17 RT 06 R2 14');
+insert into penumpang values('SA172','Budi Aziz','Laki-Laki','45','Jl Cibiru Hilir no 18 RT 06 R2 14');
+insert into penumpang values('SA182','Hendi nur Akbar','Laki-Laki','19','Jl Cinunuk Hilir no 19 RT 06 R2 14');
+insert into penumpang values('SA192','Akbar Nur','Laki-Laki','20','Jl Cinunuk Hilir no 20 RT 06 R2 14');
+insert into penumpang values('SA133','Aziz Abdul','Laki-Laki','21','Jl Cibiru Hilir no 21 RT 06 R2 14');
+insert into penumpang values('SA134','Didi Rusman','Laki-Laki','18','Jl Cibiru Hilir no 22 RT 06 R2 14');
+insert into penumpang values('SA135','I putu Rahman','Laki-Laki','18','Jl Cijera no 23 RT 06 R2 14');
+insert into penumpang values('SA136','Feri Akbar','Laki-Laki','19','Jl Cibiru Hilir no 24 RT 06 R2 14');
+insert into penumpang values('SA137','Hamid Alaudin ','Laki-Laki','19','Jl Cibiru Hilir no 25 RT 06 R2 14');
+insert into penumpang values('SA138','Aji Saep','Laki-Laki','18','Jl Cibiru Hilir no 26 RT 06 R2 14');
+insert into penumpang values('SA139','Hadi Epul','Laki-Laki','18','Jl Cinunuk Hilir no 27 RT 06 R2 14');
+insert into penumpang values('RA232','Dwi Azizah','Perempuan','17','Jl Cileunyi Kulon no 8 RT 06 R2 14');
+insert into penumpang values('CE212','Dwi Ningrum','Perempuan','19','Jl Sukahaji no 117 RT 06 RW 14');
+insert into penumpang values('RA332','Nurazizah','Perempuan','18','Jl Cileunyi Kulon no 8 RT 06 R2 14');
+insert into penumpang values('CE312','Hamidah','Perempuan','19','Jl Sukahaji no 118 RT 06 RW 14');
+insert into penumpang values('RA432','Muniroh','Perempuan','21','Jl Cileunyi Kulon no 10 RT 06 R2 14');
+insert into penumpang values('CE512','Cinta Aini','Perempuan','20','Jl Sukahaji no 119 RT 06 RW 14');
+insert into penumpang values('RA632','Akbariah Azizah','Perempuan','22','Jl Cileunyi Kulon no 11 RT 06 R2 14');
+insert into penumpang values('CE612','Indriyanti','Perempuan','23','Jl Sukahaji no 120 RT 06 RW 14');
+insert into penumpang values('RA732','Indira','Perempuan','24','Jl Cileunyi Kulon no 13 RT 06 R2 14');
+insert into penumpang values('CE812','Trie Hayati','Perempuan','25','Jl Sukahaji no 121 RT 06 RW 14');
+insert into penumpang values('RA932','Abel Cinta','Perempuan','26','Jl Cileunyi Kulon no 12 RT 06 R2 14');
+insert into penumpang values('CE912','Nur Hamidah','Perempuan','27','Jl Sukahaji no 122 RT 06 RW 14');
+insert into penumpang values('CA132','Iqomah hukmilah','Perempuan','27','Jl Cileunyi Kulon no 14 RT 06 R2 14');
+insert into penumpang values('DE112','Mila Dewi','Perempuan','19','Jl Sukahaji no 123 RT 06 RW 14');
+
+/*tiket*/
+
+insert into tiket values('1342303',1,017,'15-01-2013','SA132','BDG-SBY-1','PT141','11111');
+insert into tiket values('4231423',3,127,'15-02-2013','CD122','BDG-SMR-1','PT111','11421');
+insert into tiket values('4232423',2,107,'16-02-2013','RE112','JKT-YGY-1','PT132','23423');
+insert into tiket values('1230223',1,067,'18-02-2013','AS132','SBY-YGY-1','PT431','12452');
+insert into tiket values('1321123',7,357,'19-02-2013','RT132','JKT-BDG-1','PT131','12522');
+insert into tiket values('3412323',3,160,'20-02-2013','CE112','SMR-SBY-1','PT161','32122');
+insert into tiket values('1423323',4,201,'24-02-2013','SE132','YGY-SMR-1','PT114','12122');
+insert into tiket values('5233323',4,223,'25-02-2013','RE152','BDG-JKT-1','PT323','15222');
+insert into tiket values('8133423',1,003,'25-02-2013','CE172','BDG-YGY-1','PT141','11122');
+insert into tiket values('9021423',1,004,'25-02-2013','CR142','JKT-SBY-1','PT461','21322');
+insert into tiket values('9029423',1,005,'25-02-2013','SA032','JKT-SMR-1','PT132','90322');
+insert into tiket values('9029424',1,010,'25-01-2013','SA232','SBY-BDG-1','PT231','80322');
+insert into tiket values('4029424',1,011,'25-01-2013','SA332','SBY-JKT-1','PT031','87322');
+insert into tiket values('1346603',2,019,'15-01-2013','SA432','BDG-SBY-1','PT141','11111');
+insert into tiket values('1346604',2,020,'15-01-2013','SA532','BDG-SBY-1','PT141','11111');
+insert into tiket values('1346605',2,021,'15-01-2013','SA632','BDG-SBY-1','PT141','11111');
+insert into tiket values('1346606',2,022,'15-01-2013','SA732','BDG-SBY-1','PT141','11111');
+insert into tiket values('1346607',2,023,'15-01-2013','SA832','BDG-SBY-1','PT141','11111');
+insert into tiket values('1346608',2,024,'15-01-2013','SA932','BDG-SBY-1','PT141','11111');
+insert into tiket values('1346609',2,025,'15-01-2013','XA132','BDG-SBY-1','PT141','11111');
+insert into tiket values('1346600',2,026,'15-01-2013','SA142','BDG-SBY-1','PT141','11111');
+insert into tiket values('4266421',3,127,'15-02-2013','SA152','BDG-SMR-1','PT111','11421');
+insert into tiket values('4266422',3,128,'15-02-2013','SA162','BDG-SMR-1','PT111','11421');
+insert into tiket values('4266423',3,129,'15-02-2013','SA172','BDG-SMR-1','PT111','11421');
+insert into tiket values('4266424',3,130,'15-02-2013','SA182','BDG-SMR-1','PT111','11421');
+insert into tiket values('4266425',3,131,'15-02-2013','SA192','BDG-SMR-1','PT111','11421');
+insert into tiket values('4266426',3,132,'15-02-2013','SA133','BDG-SMR-1','PT111','11421');
+insert into tiket values('4233421',2,108,'16-02-2013','SA134','JKT-YGY-1','PT132','23423');
+insert into tiket values('4233422',2,109,'16-02-2013','SA134','JKT-YGY-1','PT132','23423');
+insert into tiket values('4233423',2,110,'16-02-2013','SA134','JKT-YGY-1','PT132','23423');
+insert into tiket values('1230023',1,068,'18-02-2013','SA137','SBY-YGY-1','PT431','12452');
+insert into tiket values('1230024',1,069,'18-02-2013','SA138','SBY-YGY-1','PT431','12452');
+insert into tiket values('1230025',1,070,'18-02-2013','SA139','SBY-YGY-1','PT431','12452');
+insert into tiket values('1320021',7,358,'19-02-2013','RA232','JKT-BDG-1','PT131','12522');
+insert into tiket values('1320022',7,359,'19-02-2013','CE212','JKT-BDG-1','PT131','12522');
+insert into tiket values('1320023',7,355,'19-02-2013','RA332','JKT-BDG-1','PT131','12522');
+insert into tiket values('1320024',7,356,'19-02-2013','CE312','JKT-BDG-1','PT131','12522');
+insert into tiket values('1320025',7,354,'19-02-2013','RA432','JKT-BDG-1','PT131','12522');
+insert into tiket values('3400321',3,160,'20-02-2013','CE512','SMR-SBY-1','PT161','32122');
+insert into tiket values('3400322',3,161,'20-02-2013','RA632','SMR-SBY-1','PT161','32122');
+insert into tiket values('3400323',3,162,'20-02-2013','CE612','SMR-SBY-1','PT161','32122');
+insert into tiket values('1423301',4,202,'24-02-2013','RA732','YGY-SMR-1','PT114','12122');
+insert into tiket values('1423302',4,203,'24-02-2013','CE812','YGY-SMR-1','PT114','12122');
+insert into tiket values('5233001',4,224,'25-02-2013','RA932','BDG-JKT-1','PT323','15222');
+insert into tiket values('5233002',4,225,'25-02-2013','CE912','BDG-JKT-1','PT323','15222');
+insert into tiket values('8133024',1,004,'25-02-2013','CA132','BDG-YGY-1','PT141','11122');
+insert into tiket values('8133025',1,005,'25-02-2013','DE112','BDG-YGY-1','PT141','11122');
+
